@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:8080/api/cars'
+// const API_BASE = 'http://localhost:8080/api/cars'
+const API = import.meta.env.VITE_API_BASE_URL + 'api/cars';
 
 export async function getCars(params = {}) {
   const query = new URLSearchParams()
