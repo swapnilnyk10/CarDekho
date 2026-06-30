@@ -1,0 +1,455 @@
+.car-app {
+  min-height: 100vh;
+  width: 100%;
+  background: #f4f7fb;
+  color: #1f2937;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 32px;
+  background: #e53935;
+  border-bottom: 1px solid #d32f2f;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.navbar .brand,
+.navbar .navbar-title,
+.navbar .compare-button {
+  color: #fff;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.brand-icon {
+  font-size: 1.7rem;
+}
+
+.navbar-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.compare-button,
+.back-button,
+.apply-button,
+.shortlist-button,
+.remove-button,
+.reset-button {
+  border: none;
+  cursor: pointer;
+}
+
+.compare-button {
+  background: #9ca3af;
+  color: #111827;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-panel,
+.listing-panel,
+.compare-view {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 20px;
+}
+
+.filter-panel {
+  position: sticky;
+  top: 92px;
+  height: fit-content;
+}
+
+.filter-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.filter-header h3 {
+  margin: 0;
+}
+
+.reset-button {
+  background: transparent;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.filter-panel label,
+.loan-controls label {
+  display: grid;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.filter-panel span,
+.loan-controls span {
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.filter-panel select,
+.filter-panel input,
+.loan-controls input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.apply-button {
+  margin-top: 18px;
+  width: 100%;
+  padding: 12px;
+  background: #9ca3af;
+  color: #111827;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.loan-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.car-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.car-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.car-body {
+  padding: 14px;
+}
+
+.car-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.car-title-row h3 {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.badge {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+.meta-row {
+  display: flex;
+  gap: 12px;
+  margin: 8px 0;
+  font-weight: 600;
+  color: #475569;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 14px 0;
+}
+
+.details-grid div {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  padding: 10px;
+  border-radius: 12px;
+}
+
+.details-grid span {
+  display: block;
+  font-size: 0.68rem;
+  color: #64748b;
+}
+
+.details-grid strong {
+  font-size: 0.86rem;
+}
+
+.shortlist-button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 12px;
+  background: #9ca3af;
+  color: #111827;
+  font-weight: 600;
+}
+
+.shortlist-button.active {
+  background: #d1d5db;
+}
+
+.error-banner {
+  margin-top: 14px;
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px 12px;
+  border-radius: 10px;
+}
+
+.loading-state,
+.empty-state {
+  padding: 40px;
+  text-align: center;
+  color: #64748b;
+}
+
+.compare-view {
+  margin: 24px;
+}
+
+.compare-view h2 {
+  color: #000000;
+}
+
+.compare-loan-controls {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 280px));
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.compare-loan-controls label {
+  display: grid;
+  gap: 8px;
+}
+
+.compare-loan-controls span {
+  font-weight: 600;
+}
+
+.compare-loan-controls input {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+}
+
+.compare-scroll-wrap {
+  overflow-x: auto;
+}
+
+.compare-scroll-wrap::-webkit-scrollbar {
+  height: 10px;
+}
+
+.compare-scroll-wrap::-webkit-scrollbar-track {
+  background: #4b5563;
+}
+
+.compare-scroll-wrap::-webkit-scrollbar-thumb {
+  background: #6b7280;
+  border-radius: 999px;
+}
+
+.compare-table {
+  width: 100%;
+  min-width: 760px;
+  border-collapse: collapse;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 12px;
+  border: 1px solid #e5e7eb;
+  vertical-align: top;
+  text-align: left;
+}
+
+.compare-sticky-col {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: #ffffff;
+}
+
+.compare-field-header {
+  font-weight: 700;
+  min-width: 140px;
+}
+
+.compare-field-label {
+  font-weight: 600;
+}
+
+.compare-car-header {
+  min-width: 280px;
+}
+
+.compare-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.compare-car-title {
+  margin: 10px 0 8px;
+  font-weight: 700;
+}
+
+.compare-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 16px;
+}
+
+.compare-header h2 {
+  margin: 0;
+}
+
+.back-button {
+  background: #f8d7da;
+  color: #7f1d1d;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.compare-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.compare-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 12px;
+  background: #f8fafc;
+}
+
+.compare-card-top {
+  position: relative;
+}
+
+.compare-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.compare-tag {
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.64rem;
+  font-weight: 700;
+}
+
+.best-price {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.best-mileage {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.best-safety {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.best-emi {
+  background: #f3e8ff;
+  color: #7c3aed;
+}
+
+.compare-card-body h3 {
+  margin: 10px 0 4px;
+}
+
+.variant {
+  margin: 0;
+  color: #64748b;
+}
+
+.bullet-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.bullet-grid span {
+  background: #ffffff;
+  padding: 8px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  font-size: 0.78rem;
+}
+
+.remove-button {
+  margin-top: 12px;
+  width: 100%;
+  background: #d1d5db;
+  color: #111827;
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .catalog-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-panel {
+    position: static;
+  }
+
+  .car-grid {
+    grid-template-columns: 1fr;
+  }
+}
