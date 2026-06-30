@@ -42,6 +42,8 @@ To keep the project focused and within the requested scope, we deliberately left
 - Build and syntax issue debugging during development
 
 ### Done manually
+- Backend endpoints and services
+- Data persistence and initial setup
 - Defined the core flow and user requirements
 - Connected the frontend to the backend API endpoints
 - Chose the actual comparison fields and EMI behavior
@@ -59,6 +61,7 @@ The AI tools were most helpful for:
 
 The tools were less useful when:
 
+- Designing the flow and connecting frontend with backend
 - Product decisions needed domain judgment rather than generic code generation
 - Backend contract behavior had to be validated against the real API responses
 - Design decisions required manual refinement to match the expected user experience
@@ -67,8 +70,10 @@ The tools were less useful when:
 
 Given more time, we would add:
 
-- Persistent shortlist storage with localStorage
+- Authentication and user accounts
+- Persistent shortlist storage 
 - Better sorting and pagination for large car listings
 - More advanced comparison highlights and explanations
+- Use PostgreSQL in place of H2
 - Loading skeletons and better empty/error states
 - A more polished responsive design and accessibility improvements
